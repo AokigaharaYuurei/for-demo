@@ -53,7 +53,7 @@
         </header>
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-                <div class="container mx-auto">
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                     @foreach ($tours as $tour )
                         <div>
                             <img src="{{Vite::asset($tour->image)}}" alt="">
