@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     public function index(){
-        
+        $orders = Order::where('user_id',Auth::user()->id)->get();
+        return view('dashboard',compact('orders'));
     }
 
     public function create(Tour $tour){
