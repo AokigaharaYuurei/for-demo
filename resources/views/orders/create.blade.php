@@ -9,8 +9,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+                    <h3>{{$tour->title}}</h3>
+                    <h3>{{$tour->data}}</h3>
+
                     <form action="{{route('orders.store')}}" method="POST">
-                    <!--Кол во-->
+                        <!--Кол во-->
                         @csrf
                         <div>
                             <x-input-label for="count" :value="__('Количество')" />
@@ -18,10 +21,12 @@
                             <x-input-error :messages="$errors->get('count')" class="mt-2" />
                         </div>
 
-                         <x-primary-button class="ms-3">
-                Забронировать
-            </x-primary-button>
-                    </form>    
+                        <input type="hidden" name="tour_id" value="{{$tour->id}}">
+
+                        <x-primary-button class="ms-3">
+                            Забронировать
+                        </x-primary-button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -61,7 +61,7 @@
                             <p>{{$tour->data}}</p>
                             <p>{{$tour->cost}}</p>
                             @auth
-                                <a href="{{route('orders.create')}}" class="flex w-100 bg-[#9c9c9c] h-8 rounded-md items-center justify-center hover:bg-[#727272]">Забронировать</a>
+                                <a href="{{route('orders.create', $tour->id)}}" class="flex w-100 bg-[#9c9c9c] h-8 rounded-md items-center justify-center hover:bg-[#727272]">Забронировать</a>
                             @endauth
                         </div>
                     @endforeach
