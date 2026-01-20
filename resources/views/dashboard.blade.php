@@ -10,8 +10,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     @foreach ($orders as $order)
-                        <div>
-                            <p>Дата тура<time>{{$order->tour->data}}</time></p>
+                        <div class="border-b mb-5 pb-3 border-[#000000]">
+                            <p>Дата тура<time class="text-[#a3a3a3]">{{$order->tour->data}}</time></p>
                             <p>Название тура</p>
                             <h3>{{$order->tour->title}}</h3>
                             <p>Количество мест: {{$order->count}}</p>
