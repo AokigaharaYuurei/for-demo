@@ -9,25 +9,32 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
-        <!-- Middlename -->
+        <!-- middlename -->
         <div>
-            <x-input-label for="middlename" :value="__('Middlename')" />
+            <x-input-label for="middlename" :value="__('Отчество')" />
             <x-text-input id="middlename" class="block mt-1 w-full" type="text" name="middlename" :value="old('middlename')" required autofocus autocomplete="middlename" />
             <x-input-error :messages="$errors->get('middlename')" class="mt-2" />
         </div>
 
-        <!-- Lastname -->
+        <!-- lastname -->
         <div>
-            <x-input-label for="lastname" :value="__('Lastname')" />
+            <x-input-label for="lastname" :value="__('Фамилия')" />
             <x-text-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus autocomplete="lastname" />
             <x-input-error :messages="$errors->get('lastname')" class="mt-2" />
         </div>
 
-        <!-- Tel -->
+         <!-- login -->
         <div>
-            <x-input-label for="lastname" :value="__('Lastname')" />
-            <x-text-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus autocomplete="lastname" />
-            <x-input-error :messages="$errors->get('lastname')" class="mt-2" />
+            <x-input-label for="login" :value="__('Логин')" />
+            <x-text-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('login')" required autofocus autocomplete="login" />
+            <x-input-error :messages="$errors->get('login')" class="mt-2" />
+        </div>
+
+        <!-- tel -->
+        <div>
+            <x-input-label for="tel" :value="__('Телефон')" />
+            <x-text-input id="tel" class="block mt-1 w-full" type="tel" name="tel" :value="old('tel')" required autofocus autocomplete="tel" />
+            <x-input-error :messages="$errors->get('tel')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
