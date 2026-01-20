@@ -30,7 +30,7 @@
                             href="{{ url('/dashboard') }}"
                             class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
                         >
-                            Dashboard
+                            Личный кабинет
                         </a>
                     @else
                         <a
@@ -60,6 +60,9 @@
                             <h3>{{$tour->title}}</h3>
                             <p>{{$tour->data}}</p>
                             <p>{{$tour->cost}}</p>
+                            @auth
+                                <a href="{{route('orders.create')}}" class="flex w-100 bg-[#9c9c9c] h-8 rounded-md items-center justify-center hover:bg-[#727272]">Забронировать</a>
+                            @endauth
                         </div>
                     @endforeach
                 </div>
