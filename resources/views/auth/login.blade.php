@@ -17,9 +17,9 @@
             <x-input-label for="password" :value="__('Password')" />
 
             <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+                type="password"
+                name="password"
+                required autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
@@ -33,10 +33,12 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
+            @if (Route::has('register'))
+            <a
+                href="{{ route('register') }}"
+                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] hover:text-[#363634] text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                Зарегистрироваться
+            </a>
             @endif
 
             <x-primary-button class="ms-3">
