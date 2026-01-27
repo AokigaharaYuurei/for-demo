@@ -20,7 +20,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div>
-                        <h2>Фильтрация по туры</h2>
+                        <h2>Фильтрация по турам</h2>
                         <ul>
                             <li><a href="{{route('admin.index')}}">Все</a></li>
                             @foreach ($tours as $tour)
